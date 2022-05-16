@@ -1,0 +1,26 @@
+<div class="navbar">
+  <div class="navbar-logo">
+    <img class="navbar-logo" src="../assets/img/Medic Search.png" alt="Logo Proyecto">
+    <span class="navbar-text"> Consulta-Paciente </span>
+  </div>
+  <div *ngIf="email; else loading">
+    <span class="navbar-text"> Usuario: {{email}} </span>
+  </div>
+<div class="navbar-enlaces">
+  <div class="navbar-link" [routerLink]="['/register-paciente']">
+    <a>Registrar</a>
+  </div>
+  <div class="navbar-link" [routerLink]="['/consulta-paciente']">
+    <a>Consultar</a>
+  </div>
+  <div class="navbar-link" [routerLink]="['/login']">
+    <a>Cerrar Sesión</a>
+  </div>
+</div>
+</div>
+
+<ng-template #loading>
+  <span>
+    Cargando...
+  </span>
+</ng-template>

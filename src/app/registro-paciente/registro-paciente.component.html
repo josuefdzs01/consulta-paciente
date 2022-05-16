@@ -1,0 +1,182 @@
+<app-navbar></app-navbar>
+
+<div>
+  <div class="title-page">
+    <span> Registrar paciente </span>
+  </div>
+</div>
+
+<div class="mt-5 mb-5">
+  <form action=""> <!-- Formulario  -->
+    <fieldset class="fieldset row mb-5" [formGroup]="pacienteForm">
+        <legend style="text-align: center;"> Datos personales </legend>
+        <div class="row mb-4 mt-4" style="width: 100%;">
+          <div class="col-sm-6 input-wrapper">
+            <label for="nombre"> Nombre: </label>
+            <input class="input-1 form-control input password" formControlName="nombreP" type="text" id="nombre" placeholder="Nombre" required>
+            <i class="input-icon-p password bi bi-person-circle"></i>
+          </div>
+          <div class="col-sm-6 input-wrapper">
+            <label for="email"> Apellido: </label>
+            <input class="input-1 form-control input password" formControlName="apellidoP" type="apellido" id="apellido" placeholder="Apellido" required>
+            <i class="input-icon-p password bi bi-lock"></i>
+          </div>
+        </div>
+        <div class="row mb-4" style="width: 100%;">
+          <div class="col-sm-2 input-wrapper">
+            <label for="edad"> Edad: </label>
+            <input class="input-2 form-control input password" formControlName="edadP" type="edad" id="edad" placeholder="Edad" required>
+            <i class="input-icon-p password bi bi-alarm"></i>
+          </div>
+          <div class="col-sm-2 input-wrapper">
+            <label for="telefono"> Peso: </label>
+            <input class="input-2 form-control input password" formControlName="pesoP" type="peso" id="peso" placeholder="Peso" required>
+            <i class="input-icon-p password bi bi-funnel"></i>
+          </div>
+          <div class="col-sm-2 input-wrapper">
+            <label for="direccion"> Genero: </label>
+            <select class="input-1 form-control input password" formControlName="generoP" id="genero" style="margin-left: 10px;">
+              <option selected disabled>--Selecciona--</option>
+              <option value="masculino"> Masculino </option>
+              <option value="femenino"> Femenino </option>
+            </select>
+          </div>
+          <div class="col-sm-6 input-wrapper">
+            <label for="nombre"> Fecha de nacimiento: </label>
+            <input class="input-1 form-control input password" formControlName="nacimientoDateP" style="padding-right: 5px;" type="date" id="fecha">
+          </div>
+        </div>
+        <div class="row mb-4" style="width: 100%;"> 
+          <div class="col-sm-6 input-wrapper">
+            <label for="telefono"> Telefono: </label>
+            <input class="input-1 form-control input password" formControlName="telefonoP" type="tel" id="telefono" placeholder="Telefono" required>
+            <i class="input-icon-p password bi bi-telephone"></i>
+          </div>
+          <div class="col-sm-6 input-wrapper">
+            <label for="telefono"> Correo Electronico: </label>
+            <input class="input-1 form-control input password" formControlName="emailP" type="email" id="email" placeholder="Correo Electronico" required>
+            <i class="input-icon-p password bi bi-envelope"></i>
+          </div>
+        </div>
+        <div class="row mb-3" style="width: 100%;">
+          <div class="col-sm-12 input-wrapper2">
+            <label for="direccion"> Dirección: </label>
+            <input class="input-1 form-control input password" formControlName="direccionP" type="direccion" id="direccion" placeholder="Direccion" required>
+            <i class="input-icon-p password bi bi-geo-alt"></i>
+          </div>
+        </div>
+    </fieldset>
+
+    <fieldset class="fieldset row mb-5" [formGroup]="contactoEmergenciaForm">
+      <legend style="text-align: center;"> Contacto de emergencia </legend>
+      <div class="row mb-4 mt-4" style="width: 100%;">
+        <div class="col-sm-6 input-wrapper">
+          <label for="nombre"> Nombre: </label>
+          <input class="input-1 form-control input password" formControlName="nombreR" type="text" id="nombre" placeholder="Nombre" required>
+          <i class="input-icon-p password bi bi-person-circle"></i>
+        </div>
+        <div class="col-sm-6 input-wrapper">
+          <label for="email"> Apellido: </label>
+          <input class="input-1 form-control input password" formControlName="apellidoR" type="apellido" id="apellido" placeholder="Apellido" required>
+          <i class="input-icon-p password bi bi-lock"></i>
+        </div>
+      </div>
+      <div class="row mb-4" style="width: 100%;">
+        <div class="col-sm-4 input-wrapper">
+          <label for="edad"> Edad: </label>
+          <input class="input-2 form-control input password" formControlName="edadR" type="edad" id="edad" placeholder="Edad" required>
+          <i class="input-icon-p password bi bi-alarm"></i>
+        </div>
+        <div class="col-sm-8 input-wrapper">
+          <label for="telefono"> Relacion con el paciente: </label>
+          <input class="input-2 form-control input password" formControlName="relacionR" type="relacion" id="relacion" placeholder="Relacion..." required>
+          <i class="input-icon-p password bi bi-funnel"></i>
+        </div>
+      </div>
+      <div class="row mb-4" style="width: 100%;"> 
+        <div class="col-sm-6 input-wrapper">
+          <label for="telefono"> Telefono: </label>
+          <input class="input-1 form-control input password" formControlName="telefonoR" type="tel" id="telefono" placeholder="Telefono" required>
+          <i class="input-icon-p password bi bi-telephone"></i>
+        </div>
+        <div class="col-sm-6 input-wrapper">
+          <label for="telefono"> Correo Electronico: </label>
+          <input class="input-1 form-control input password" formControlName="emailR" type="email" id="email" placeholder="Correo Electronico" required>
+          <i class="input-icon-p password bi bi-envelope"></i>
+        </div>
+      </div>
+      <div class="row mb-3" style="width: 100%;">
+        <div class="col-sm-12 input-wrapper2">
+          <label for="direccion"> Dirección: </label>
+          <input class="input-1 form-control input password" formControlName="direccionR" type="direccion" id="direccion" placeholder="Direccion" required>
+          <i class="input-icon-p password bi bi-geo-alt"></i>
+        </div>
+      </div>
+  </fieldset>
+
+    <fieldset class="fieldset row mb-5" [formGroup]="datosMedicosForm">
+      <legend style="text-align: center;"> Datos medicos </legend>
+      <div class="row mb-4 mt-4" style="width: 100%;">
+        <div class="col-sm-12">
+          <div class="row">
+            <div class="col-sm-12">
+              <label for="nombre"> ¿Porque viene? </label>
+            </div>
+            <div class="col-sm-12 mt-2">
+              <textarea class="input-0 form-control" formControlName="porqueViene" type="text" id="nombre" required></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mb-4" style="width: 100%;">
+        <div class="col-sm-12">
+          <label for="nombre"> ¿Desde cuando? </label>
+          <input class="input-2 form-control" formControlName="desdeCuando" type="date" id="fecha">
+        </div>
+      </div>
+      <div class="row" style="width: 100%;">
+        <div class="col-sm-6">
+          <label>¿Cuenta con vacunas COVID-19?</label>
+            <label for="Telefono" style="margin-left: 10px;"> Si </label>
+            <input type="radio" value="si" name="covid" id="covid" formControlName="vacuna">
+
+            <label for="Correo" style="margin-left: 10px;"> No </label>
+            <input type="radio" value="no" name="covid" id="covid" formControlName="vacuna">
+        </div>
+        <div class="col-sm-6">
+          <label>¿Alergias?</label>
+            <label for="Telefono" style="margin-left: 10px;"> Si </label>
+            <input type="radio" value="si" name="alergias" id="alergias" formControlName="alergias">
+
+            <label for="Correo" style="margin-left: 10px;"> No </label>
+            <input type="radio" value="no" name="alergias" id="alergias" formControlName="alergias">
+        </div>
+      </div>
+      <div class="row" style="width: 100%;">
+        <div class="col-sm-6">
+          <label>¿Anteriormente le paso lo mismo?</label>
+            <label for="Telefono" style="margin-left: 10px;"> Si </label>
+            <input type="radio" value="si" name="anteriormente" id="anteriormente" formControlName="anteriormente">
+
+            <label for="Correo" style="margin-left: 10px;"> No </label>
+            <input type="radio" value="no" name="anteriormente" id="anteriormente" formControlName="anteriormente">
+        </div>
+      </div>
+      <div class="row mb-4 mt-4" style="width: 100%;">
+        <div class="col-sm-12">
+          <div class="row">
+            <div class="col-sm-12">
+              <label for="receta"> Receta: </label>
+            </div>
+            <div class="col-sm-12 mt-2">
+              <textarea class="input-0 form-control" formControlName="receta" type="text" id="receta" required></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+  </fieldset>
+  <div class="mt-2 input-consult">
+    <button type="button" class="btn btn-primary" (click)="enviarDatos()">Enviar</button>
+  </div>
+ </form>
+</div>
